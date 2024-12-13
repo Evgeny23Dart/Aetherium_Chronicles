@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/Aetherium_Chronicles/Library
+/Aetherium_Chronicles/Temp
+/Aetherium_Chronicles/UserSettings
+/Aetherium_Chronicles/Logs
