@@ -75,3 +75,8 @@ crashlytics-build.properties
 /Aetherium_Chronicles/UserSettings
 /Aetherium_Chronicles/Logs
 /Aetherium_Chronicles/Assets/PlayMaker
+/Aetherium_Chronicles/Assets/Gizmos
+/Aetherium_Chronicles/Assets/Plugins
+Aetherium_Chronicles/Assets/Gizmos.meta
+Aetherium_Chronicles/Assets/Plugins.meta
+Aetherium_Chronicles/Assets/PlayMaker.meta
