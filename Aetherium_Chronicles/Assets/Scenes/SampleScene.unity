@@ -7034,7 +7034,7 @@ GameObject:
   - component: {fileID: 1978394385}
   - component: {fileID: 1978394384}
   - component: {fileID: 1978394383}
-  - component: {fileID: 1978394382}
+  - component: {fileID: 1978394386}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -7042,33 +7042,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1978394382
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978394381}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1978394383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7111,7 +7084,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SetVelocity
+        - HutongGames.PlayMaker.Actions.SetVelocity2d
         - HutongGames.PlayMaker.Actions.GetProperty
         - HutongGames.PlayMaker.Actions.FloatCompare
         customNames:
@@ -7119,9 +7092,9 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101
-        actionIsOpen: 000000
-        actionStartIndex: 000000000700000009000000
-        actionHashCodes: 5552ad055ac852041bcdca04
+        actionIsOpen: 010000
+        actionStartIndex: 000000000600000008000000
+        actionHashCodes: 68fde3045ac852041bcdca04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -7290,12 +7263,6 @@ MonoBehaviour:
           networkSync: 0
           value: 4
         - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
           name: DistanceFlown
           tooltip: 
           showInInspector: 0
@@ -7315,14 +7282,14 @@ MonoBehaviour:
           value: 0
         fsmIntParams: []
         fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params:
-        - useVariable: 1
+        fsmVector2Params:
+        - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {x: 0, y: 0, z: 0}
+          value: {x: 0, y: 0}
+        fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
@@ -7330,18 +7297,17 @@ MonoBehaviour:
         - DestroyBullet
         - 
         - DestroyBullet
-        byteData: 01000000000101
+        byteData: 00000000000101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f000000070000000100000024000000010000000f0000000f0000000f00000017000000170000001700000001000000
+        paramDataType: 14000000250000000f0000000f000000070000000100000024000000010000000f0000000f0000000f00000017000000170000001700000001000000
         paramName:
         - gameObject
         - vector
         - x
         - y
-        - z
         - space
         - everyFrame
         - targetProperty
@@ -7353,8 +7319,8 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 00000000000000000000000001000000020000000000000004000000000000000500000003000000040000000500000000000000010000000200000006000000
-        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000000000000100000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000010000000000000004000000000000000500000002000000030000000400000000000000010000000200000006000000
+        paramByteDataSize: 000000000000000000000000000000000400000001000000000000000100000000000000000000000000000000000000000000000000000001000000
     - name: Destroyself
       description: 
       colorIndex: 0
@@ -7575,6 +7541,33 @@ Transform:
   - {fileID: 668484102}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1978394386
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978394381}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
