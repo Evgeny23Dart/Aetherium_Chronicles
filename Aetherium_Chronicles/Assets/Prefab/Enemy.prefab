@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3005033542036824054
 Transform:
   m_ObjectHideFlags: 0
@@ -5026,7 +5026,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 98
+        x: 50
         y: 100
         width: 123.333336
         height: 48
@@ -5152,7 +5152,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 294
+        x: 246
         y: 77.32031
         width: 102.666664
         height: 16
@@ -5227,7 +5227,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 280.97656
+        x: 232.97656
         y: 154.25781
         width: 123.333336
         height: 32
@@ -5250,15 +5250,17 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.SetProperty
+        - HutongGames.PlayMaker.Actions.IntAdd
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000001000000050000000a000000
-        actionHashCodes: 5c004505ba7ea101b2cf10005ac85204
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000001000000050000000a0000000c000000
+        actionHashCodes: 5c004505ba7ea101b2cf10005ac85204603dd905
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -5464,7 +5466,19 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Score
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -5484,12 +5498,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00000100
+        byteData: 0000010000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 130000001f000000120000000f0000000100000014000000110000001100000001000000010000002400000001000000
+        paramDataType: 130000001f000000120000000f0000000100000014000000110000001100000001000000010000002400000001000000100000001000000001000000
         paramName:
         - storeGameObject
         - eventTarget
@@ -5503,60 +5517,11 @@ MonoBehaviour:
         - everyFrame
         - targetProperty
         - everyFrame
-        paramDataPos: 000000000000000000000000000000000000000000000000000000000100000001000000020000000000000003000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000010000000000000001000000
-    - name: Updatescore
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 57.921875
-        y: 230.23438
-        width: 110
-        height: 16
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        - intVariable
+        - add
+        - everyFrame
+        paramDataPos: 000000000000000000000000000000000000000000000000000000000100000001000000020000000000000003000000000000000100000004000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000010000000000000001000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
