@@ -3,15 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Destroyer
+  - Bullet
+  - Particle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particle
   - Water
   - UI
-  - 
+  - Background
   - 
   - 
   - 
@@ -38,6 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Particles
+    uniqueID: 457332047
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Clouds
+    uniqueID: 2419552897
+    locked: 0
+  - name: Background
+    uniqueID: 1685949553
     locked: 0
